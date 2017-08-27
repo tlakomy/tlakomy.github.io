@@ -1,0 +1,4 @@
+// ES2015+ code -> Babel -> Babili/Uglify -> Minified ES5
+
+var a=function a(b){_classCallCheck(this,a),this.program=b};new a;
+

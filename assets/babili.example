@@ -1,0 +1,4 @@
+// ES2015+ code -> Babili -> Minified ES2015+
+
+class a{constructor(b){this.program=b}}new a;
+
