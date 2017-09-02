@@ -17,11 +17,6 @@ import createTheme from "spectacle/lib/themes/default";
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-require("../themes/seattlejs/index.css");
-// Best way to include fonts rite
-require("../fonts/worksans.css");
-require("../fonts/biorhyme.css");
-require("../fonts/silkscreen.css");
 
 const images = {
   markdown: require("../assets/markdown.png"),
@@ -64,7 +59,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
-        <Slide maxWidth={1400} transition={["zoom"]} bgColor="primary">
+        <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="black">
             Load it faster
           </Heading>
