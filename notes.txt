@@ -1,33 +1,33 @@
 Talk plan:
 
 1. Greetings
-2. Introduction
+2. Introduction/Title
 3. Egnyte Propaganda
 4. Disclaimer - some things may be obvious
 5. Motivation
 	a. Empathy
 	b. Your users won't have $3000 Macbook - Paulo Coelho
-	c. Mobile only
-	d. 7.5 bilion people worldwide
-	e. 3.8 bilion Internet users, 51% of total population (source: https://www.slideshare.net/wearesocialsg/global-digital-statshot-q3-2017)
-	f. Nearly 60% of web traffic comes from mobile devices
+	c. 7.5 bilion people worldwide
+	d. 3.8 bilion Internet users, 51% of total population (source: https://www.slideshare.net/wearesocialsg/global-digital-statshot-q3-2017)
+	e . Nearly 60% of web traffic comes from mobile devices
 6. Let's talk about mobile
-	a. Parsing JavaScript on mobile is costly
+	a. Mobile only
+	b. Parsing JavaScript on mobile is costly
 		- Number of hours per 500MB of data (https://building.calibreapp.com/beyond-the-bubble-real-world-performance-9c991dcd5342)
 		- JS parsing time (https://medium.com/reloading/javascript-start-up-performance-69200f43b201)
 		- Who the hell is OPPO? (http://www.idc.com/getdoc.jsp?containerId=prUS42507917) - mobile phone share
-7. Average webpage is now 3MB (https://twitter.com/HenriHelvetica/status/888129619550810112)
 8. Some things will always be slow (Melbourne <-> US 50ms) (https://twitter.com/skimbrel/status/893337218101555200)
 9. The best code is no code
 10. There's no single way to optimize, every app is different
-11. Chrome Audits panel (http://isfiberreadyyet.com/)
+11. Chrome Audits panel 
 12. Sheeping less stuff
-	a. Meet Shrek (http://cdn.earthporm.com/wp-content/uploads/2014/08/shrek-the-sheep-65.jpg)
-	b. Ship less code, images, fonts
-	c. Use Babili to minimize JS, because it knows ES6
-	d. Compress images (https://codepen.io/shshaw/full/LVKEdv)
-	e. Measure code coverage (Chrome 59+)
-	f. Webpack tree shaking
+	a. Average webpage is now 3MB (https://twitter.com/HenriHelvetica/status/888129619550810112)
+	b. Meet Shrek (http://cdn.earthporm.com/wp-content/uploads/2014/08/shrek-the-sheep-65.jpg)
+	c. Ship less code, images, fonts
+	d. Use Babili to minimize JS, because it knows ES6
+	e. Compress images (https://codepen.io/shshaw/full/LVKEdv)
+	f. Measure code coverage (Chrome 59+)
+	g. Webpack tree shaking
 13. React specific optimizations
 14. React is fast by default
 15. Fiber is already here (http://isfiberreadyyet.com/)

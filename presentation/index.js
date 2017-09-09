@@ -46,7 +46,17 @@ const images = {
   reactInline: require("../assets/reactInline.png"),      
   profiling: require("../assets/profiling.png"),      
   splitting: require("../assets/splitting.png"),     
-  inception: require("../assets/inception.png"),     
+  inception: require("../assets/inception.png"),
+  data500Mb: require("../assets/500mbData.png"),
+  jsStartup: require("../assets/jsStartup.jpg"),
+  globalPhoneSale: require("../assets/globalPhoneSale.png"),
+  averageWebsite: require("../assets/averageWebsite.png"),
+  shrek: require("../assets/shrek.jpg"),
+  shrekAfter: require("../assets/shrekAfter.jpg"),
+  responsibility: require("../assets/responsibility.gif"),
+  noThrottling: require("../assets/noThrottling.png"),
+  throttlingOn: require("../assets/throttlingOn.png"),
+  lighthouse: require("../assets/lighthouse.png"),
 };
 
 preloader(images);
@@ -58,8 +68,8 @@ const theme = createTheme({
 export default class Presentation extends React.Component {
   render() {
     return (
-      <Deck transition={["zoom", "slide"]} theme={theme} transitionDuration={500}>
-        <Slide transition={["zoom"]} bgColor="primary">
+      <Deck contentWidth={1200} transition={["fade"]} theme={theme} transitionDuration={500}>
+        <Slide bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="black">
             Load it faster
           </Heading>
@@ -68,28 +78,26 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text textSize="1em" caps margin="20px 0px 0px" bold>Tomasz Łakomy, Software Engineer @ Egnyte</Text>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black" transition={["fade"]}>
-          <Image src={images.egnyteLogo.replace("/", "")}/>
+        <Slide maxWidth={1400} bgColor="black">
+          <Image fit src={images.egnyteLogo.replace("/", "")} height="300px"/>
         </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
-          <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Disclaimer
-          </Heading>
-        </Slide>
-        <Slide transition={["slide"]} bgColor="black">
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Motivation
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black" transition={["fade"]}>
-          <Image src={images.cpu13percent.replace("/", "")} height="300px"/>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            Empathy
+          </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
-          <BlockQuote>
-            <Quote italic textColor="black">
-              VS Code uses 13% CPU when focused and idle, draining battery. This is likely due to the blinking cursor rendering. I think CPU usage when focused-and-idle could ideally be near-0%.
-            </Quote>
-          </BlockQuote>
+        <Slide maxWidth={1400} bgColor="black">
+          <Image fit src={images.responsibility.replace("/", "")} height="400px"/>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            Tech Bubble 🔮
+          </Heading>
         </Slide>
         <Slide maxWidth={1400}>
           <BlockQuote>
@@ -99,61 +107,151 @@ export default class Presentation extends React.Component {
             <Cite>Paulo Coelho</Cite>
           </BlockQuote>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black" transition={["zoom"]}>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            7.5 bilion people 🌍
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            3.8 bilion Internet users 👩‍💻
+          </Heading>
+          <Cite>Source: https://www.slideshare.net/wearesocialsg/global-digital-statshot-q3-2017</Cite>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            49% of people are not online (yet!)
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            60% of web traffic comes from mobile devices
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            Let's talk about mobile
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400} bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Mobile <S type="strikethrough">first</S> only
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black" transition={["slide"]}>
-          <Image src={images.mobileSearches.replace("/", "")} height="900px"/>
-        </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
-          <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Most people don't have 4G
-          </Heading>
-        </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black" transition={["slide"]}>
-          <Image src={images.networkDevTools.replace("/", "")} height="900px"/>
-        </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
-            Parsing JavaScript on mobile is costly
+            JavaScript on mobile is costly
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide bgColor="black">
+          <Image fit src={images.data500Mb.replace("/", "")} height="700px"/>
+          <Cite>Source: Ben Schwarz - Beyond the Bubble: Real world performance @ medium.com</Cite>
+        </Slide>
+        <Slide bgColor="black">
+          <Image fit src={images.jsStartup.replace("/", "")} height="700px"/>
+          <Cite>Source: Addy Osmani - JavaScript Start-up Performance @ medium.com</Cite>
+        </Slide>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
-            There’s no single way to optimize, every app is different
+            Everyone uses Chrome on Android, right?
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit textFont="primary">
+            Global smartphone sales Q1 2017
+          </Heading>
+          <List>
+            <Appear><ListItem>Samsung: 78.6 Million</ListItem></Appear>
+            <Appear><ListItem>Apple: 51.9 Million</ListItem></Appear>
+            <Appear><ListItem>Huawei: 34.1 Million</ListItem></Appear>
+            <Appear><ListItem>Oppo: 30.9 Million 😲</ListItem></Appear>
+            <Appear><ListItem>Vivo: 25.8 Million</ListItem></Appear>
+            <Appear><ListItem>Others: 158.3 Million</ListItem></Appear>
+            <Appear><Cite>Source: Ben Schwarz - Beyond the Bubble: Real world performance @ medium.com</Cite></Appear>
+          </List>
+        </Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit textFont="primary">
+            Mobile browser market share worldwide
+          </Heading>
+          <List>
+            <Appear><ListItem>Chrome: 50.62%</ListItem></Appear>
+            <Appear><ListItem>Safari: 18.63%</ListItem></Appear>
+            <Appear><ListItem>UC Browser: 13.82% 😲</ListItem></Appear>
+            <Appear><ListItem>Samsung Internet: 6.61%</ListItem></Appear>
+            <Appear><ListItem>Opera: 5.6%</ListItem></Appear>
+            <Appear><ListItem>Android: 3.14%</ListItem></Appear>
+            <Appear><Cite>Source: http://gs.statcounter.com/browser-market-share/mobile/worldwide/#monthly-201608-201708</Cite></Appear>
+          </List>
+        </Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            We don't know the average user
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            So let's optimize for everyone!
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             The best code is no code
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.bookshelf.replace("/", "")} bgDarken={0.5}>
+        <Slide maxWidth={1400} bgImage={images.bookshelf.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Users, not code
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
+          <Image fit src={images.averageWebsite.replace("/", "")} height="700px"/>
+          <Cite>Source: https://twitter.com/HenriHelvetica/status/888129619550810112</Cite>
+        </Slide>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
-            Ship less assets (fonts, images, code)
+            Network & CPU
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400} bgImage={images.networkDevTools.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400} bgImage={images.noThrottling.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400} bgImage={images.throttlingOn.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            Sheep less assets (fonts, images, code)
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            Meet Shrek
+          </Heading>
+        </Slide>
+        <Slide maxWidth={1400} bgImage={images.shrek.replace("/", "")} bgDarken={0}>
+          <Appear>
+            <Heading size={2} caps fit textColor="black" bgColor="white">
+              (a.k.a. average JS bundle in 2017)
+            </Heading>
+          </Appear>
+        </Slide>
+        <Slide maxWidth={1400} bgImage={images.shrekAfter.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Code coverage (Chrome 59+)
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} bgColor="black" transition={["slide"]}>
-          <Image src={images.coverage.replace("/", "")} height="700px"/>
+        <Slide maxWidth={1400} bgImage={images.coverage.replace("/", "")}></Slide>
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit>
+            Lighthouse audits (Chrome 60+)
+          </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgColor="black">
+        <Slide maxWidth={1400} bgImage={images.lighthouse.replace("/", "")}></Slide>
+        <Slide maxWidth={1400} bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Minimize
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgColor="black">
+        <Slide maxWidth={1400} bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Babili
           </Heading>
@@ -179,7 +277,7 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Ship less libraries
           </Heading>
@@ -191,39 +289,31 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Webpack tree shaking
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} bgColor="black" transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000} bgColor="black">
           <Image src={images.treeshaking.replace("/", "")} height="600px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.reactbg.replace("/", "")} bgDarken={0.5}>
+        <Slide maxWidth={1400} bgImage={images.reactbg.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             React-specific optimizations
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
-          <Heading size={2} caps fit>
-            React is fast by default + Fiber!
-          </Heading>
-        </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black" transition={["slide"]}>
-          <Image src={images.fiber.replace("/", "")} height="900px"/>
-        </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Ship React for production
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black" transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={1400} bgColor="black">
           <Image src={images.osmaniTweet.replace("/", "")} height="500px"/>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000}>
           <Image src={images.devReactProd.replace("/", "")} height="900px"/>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000}>
           <Layout style={{"flex-direction": "column"}}>
             <Fill>
               <Image src={images.noReact.replace("/", "")} height="200px"/>
@@ -236,7 +326,7 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Appear fid="1">
             <Heading size={1} caps fit textColor="black">
               Remove propTypes from production
@@ -261,10 +351,10 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black" transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={1400} bgColor="black">
           <Image src={images.npmProptypes.replace("/", "")} height="500px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Appear fid="1">
               <Text textSize="1em" caps margin="20px 0px 0px" bold>Before:</Text>
           </Appear>
@@ -290,101 +380,96 @@ export default class Presentation extends React.Component {
             margin="20px auto"
           />
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             babel-react-optimize
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} bgColor="black" transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000} bgColor="black">
           <Image src={images.babelReactOptimize.replace("/", "")} height="600px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.runtime.replace("/", "")} bgDarken={0.5}>
+        <Slide maxWidth={1400} bgImage={images.runtime.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Runtime
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             React perf tools - let’s get wasted
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             npm i --save-dev react-addons-perf
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000}>
           <Image src={images.reactPerfTools.replace("/", "")} height="900px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             npm i --save-dev why-did-you-update
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000}>
           <Image src={images.whyUpdate.replace("/", "")} height="900px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Render as little as possible
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.panda.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400} bgImage={images.panda.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Use shouldComponentUpdate
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Use pure components
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             Inline React Elements in production
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} transition={["slide"]}>
+        <Slide maxHeight={900} maxWidth={2000}>
           <Image src={images.reactInline.replace("/", "")} height="900px"/>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
+        <Slide maxWidth={1400}>
           <Heading size={2} caps fit>
             React component profiling (Chrome/IE)
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.profiling.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.splitting.replace("/", "")} bgDarken={0}>
+        <Slide maxWidth={1400} bgImage={images.profiling.replace("/", "")} bgDarken={0}></Slide>
+        <Slide maxWidth={1400} bgImage={images.splitting.replace("/", "")} bgDarken={0}>
           <Heading size={2} caps fit textColor="white">
             Code Spliting
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
-          <Heading size={2} caps fit>
-            Single minified app.js
+        <Slide maxWidth={1400}>
+          <Heading size={2} caps fit textFont="primary">
+            How do we 🐑 code to production?
           </Heading>
+          <List>
+            <Appear><ListItem>Yolo development build to prod</ListItem></Appear>
+            <Appear><ListItem>Single minified app.js</ListItem></Appear>
+            <Appear><ListItem>Separate app.js and vendor.js</ListItem></Appear>
+            <Appear><ListItem>Different bundles for different routes</ListItem></Appear>
+            <Appear><Cite>Source: real life</Cite></Appear>
+          </List>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
-          <Heading size={2} caps fit>
-            Separate app.js and vendor.js
-          </Heading>
-        </Slide>
-        <Slide maxWidth={1400} transition={["zoom"]}>
-          <Heading size={2} caps fit>
-            Different bundles for different routes
-          </Heading>
-        </Slide>
-        <Slide maxWidth={1400} transition={["slide"]} bgImage={images.inception.replace("/", "")} bgDarken={0}>
+        <Slide maxWidth={1400} bgImage={images.inception.replace("/", "")} bgDarken={0}>
           <Heading size={2} fit textColor="white">
             We need to go deeper
           </Heading>
         </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
+        <Slide bgColor="black" textColor="primary">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Dynamic import()
           </Heading>
-        </Slide>
-        <Slide transition={["fade"]} bgColor="black" textColor="primary">
           <List>
             <Appear><ListItem>Currently in stage 3 of TC39 process</ListItem></Appear>
             <Appear><ListItem>Supported by Webpack 2/3</ListItem></Appear>
@@ -393,19 +478,24 @@ export default class Presentation extends React.Component {
             <Appear><ListItem>No more downloading whole library X because one component needs it</ListItem></Appear>
           </List>
         </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Dynamic imports & React loadable
           </Heading>
         </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            Demo
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Questions?
           </Heading>
         </Slide>
-        <Slide bgColor="black" transition={["zoom"]}>
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Thank you! (Follow me @tlakomy)
+            Thank you! (Twitter: @tlakomy)
           </Heading>
         </Slide>
       </Deck>
