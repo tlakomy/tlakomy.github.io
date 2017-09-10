@@ -1,8 +1,10 @@
-// 1
+// 1 - BAD
 import _ from ‘lodash’;
-// 2
+
+// 2 - BAD
 import { concat, sortBy, map, sample } from ‘lodash’;
-// 3
+
+// 3 - BETTER
 import concat from ‘lodash/concat’;
 import sortBy from ‘lodash/sortBy’;
 import map from ‘lodash/map’;

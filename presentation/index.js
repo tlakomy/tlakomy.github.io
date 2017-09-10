@@ -78,7 +78,7 @@ export default class Presentation extends React.Component {
           </Heading>
           <Text textSize="1em" caps margin="20px 0px 0px" bold>Tomasz Łakomy, Software Engineer @ Egnyte</Text>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black">
+        <Slide bgColor="black">
           <Image fit src={images.egnyteLogo.replace("/", "")} height="300px"/>
         </Slide>
         <Slide bgColor="black">
@@ -91,7 +91,7 @@ export default class Presentation extends React.Component {
             Empathy
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black">
+        <Slide bgColor="black">
           <Image fit src={images.responsibility.replace("/", "")} height="400px"/>
         </Slide>
         <Slide bgColor="black">
@@ -99,7 +99,7 @@ export default class Presentation extends React.Component {
             Tech Bubble 🔮
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <BlockQuote>
             <Quote italic textColor="black">
               Your users won’t have $3000 MacBooks.
@@ -128,35 +128,43 @@ export default class Presentation extends React.Component {
             60% of web traffic comes from mobile devices
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Let's talk about mobile
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black">
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Mobile <S type="strikethrough">first</S> only
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             JavaScript on mobile is costly
           </Heading>
         </Slide>
         <Slide bgColor="black">
-          <Image fit src={images.data500Mb.replace("/", "")} height="700px"/>
+          <Image fit src={images.data500Mb.replace("/", "")} height="600px"/>
           <Cite>Source: Ben Schwarz - Beyond the Bubble: Real world performance @ medium.com</Cite>
         </Slide>
         <Slide bgColor="black">
-          <Image fit src={images.jsStartup.replace("/", "")} height="700px"/>
+          <Image fit src={images.jsStartup.replace("/", "")} height="600px"/>
           <Cite>Source: Addy Osmani - JavaScript Start-up Performance @ medium.com</Cite>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
+          <Heading size={2} caps fit>
+            How do we simulate mobile CPU on desktop?
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Image fit src={images.throttlingOn.replace("/", "")} height="500px"/>
+        </Slide>
+        <Slide>
           <Heading size={2} caps fit>
             Everyone uses Chrome on Android, right?
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit textFont="primary">
             Global smartphone sales Q1 2017
           </Heading>
@@ -170,7 +178,7 @@ export default class Presentation extends React.Component {
             <Appear><Cite>Source: Ben Schwarz - Beyond the Bubble: Real world performance @ medium.com</Cite></Appear>
           </List>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit textFont="primary">
             Mobile browser market share worldwide
           </Heading>
@@ -184,136 +192,131 @@ export default class Presentation extends React.Component {
             <Appear><Cite>Source: http://gs.statcounter.com/browser-market-share/mobile/worldwide/#monthly-201608-201708</Cite></Appear>
           </List>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             We don't know the average user
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             So let's optimize for everyone!
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             The best code is no code
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.bookshelf.replace("/", "")} bgDarken={0.5}>
+        <Slide bgImage={images.bookshelf.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Users, not code
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
-          <Image fit src={images.averageWebsite.replace("/", "")} height="700px"/>
+        <Slide>
+          <Image fit src={images.averageWebsite.replace("/", "")} height="600px"/>
           <Cite>Source: https://twitter.com/HenriHelvetica/status/888129619550810112</Cite>
         </Slide>
-        <Slide maxWidth={1400}>
-          <Heading size={2} caps fit>
-            Network & CPU
-          </Heading>
-        </Slide>
-        <Slide maxWidth={1400} bgImage={images.networkDevTools.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400} bgImage={images.noThrottling.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400} bgImage={images.throttlingOn.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Sheep less assets (fonts, images, code)
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Meet Shrek
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.shrek.replace("/", "")} bgDarken={0}>
+        <Slide bgImage={images.shrek.replace("/", "")} bgDarken={0}>
           <Appear>
             <Heading size={2} caps fit textColor="black" bgColor="white">
               (a.k.a. average JS bundle in 2017)
             </Heading>
           </Appear>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.shrekAfter.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400}>
+        <Slide bgImage={images.shrekAfter.replace("/", "")} bgDarken={0}></Slide>
+        <Slide>
           <Heading size={2} caps fit>
             Code coverage (Chrome 59+)
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.coverage.replace("/", "")}></Slide>
-        <Slide maxWidth={1400}>
+        <Slide bgColor="black">
+          <Image fit src={images.coverage.replace("/", "")} height="500px"/>
+        </Slide>
+        <Slide>
           <Heading size={2} caps fit>
             Lighthouse audits (Chrome 60+)
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.lighthouse.replace("/", "")}></Slide>
-        <Slide maxWidth={1400} bgColor="black">
+        <Slide bgImage={images.lighthouse.replace("/", "")}></Slide>
+        <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Minimize
+            Minimize with Babili
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgColor="black">
-          <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Babili
-          </Heading>
+        <Slide bgColor="primary">
+          <Layout>
+            <Fill>
+              <CodePane
+                textSize={20}
+                lang="javascript"
+                source={require("raw-loader!../assets/class.example")}
+              />
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <CodePane
+                textSize={20}
+                lang="javascript"
+                source={require("raw-loader!../assets/uglify.example")}
+              />    
+            </Fill>
+          </Layout>
+          <Layout>
+            <Fill>
+              <CodePane
+                textSize={20}
+                lang="javascript"
+                source={require("raw-loader!../assets/babili.example")}
+              />    
+            </Fill>
+          </Layout>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom", "fade"]} bgColor="primary">
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/class.example")}
-            margin="20px auto"
-          />
-        </Slide>
-        <Slide maxWidth={1400} transition={["zoom", "fade"]} bgColor="primary">
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/uglify.example")}
-            margin="20px auto"
-          />
-        </Slide>
-        <Slide maxWidth={1400} transition={["zoom", "fade"]} bgColor="primary">
-          <CodePane
-            lang="jsx"
-            source={require("raw-loader!../assets/babili.example")}
-            margin="20px auto"
-          />
-        </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Ship less libraries
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} transition={["zoom", "fade"]} bgColor="primary">
+        <Slide bgColor="primary">
           <CodePane
-            lang="jsx"
+            lang="javascript"
+            textSize={20}
             source={require("raw-loader!../assets/lodash.example")}
-            margin="20px auto"
           />
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Webpack tree shaking
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} bgColor="black">
-          <Image src={images.treeshaking.replace("/", "")} height="600px"/>
+        <Slide bgColor="black">
+          <Image src={images.treeshaking.replace("/", "")} height="80%"/>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.reactbg.replace("/", "")} bgDarken={0.5}>
+        <Slide bgImage={images.reactbg.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             React-specific optimizations
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Ship React for production
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black">
-          <Image src={images.osmaniTweet.replace("/", "")} height="500px"/>
+        <Slide bgColor="black">
+          <Image src={images.osmaniTweet.replace("/", "")} height="100%"/>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
-          <Image src={images.devReactProd.replace("/", "")} height="900px"/>
-        </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
+        <Slide bgImage={images.devReactProd.replace("/", "")}></Slide>
+        <Slide bgColor="black">
           <Layout style={{"flex-direction": "column"}}>
             <Fill>
               <Image src={images.noReact.replace("/", "")} height="200px"/>
@@ -326,7 +329,7 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Appear fid="1">
             <Heading size={1} caps fit textColor="black">
               Remove propTypes from production
@@ -336,120 +339,121 @@ export default class Presentation extends React.Component {
             <Text textSize="1em" caps margin="20px 0px 0px" bold>(can be risky)</Text>
           </Appear>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
-          <Appear fid="1">
-            <Image src={images.reactClass.replace("/", "")} height="900px"/>
-          </Appear>
-          <Appear fid="1">
-            <Image src={images.reactClassHighlight.replace("/", "")} height="900px"/>
-          </Appear>
+        <Slide>
+          <CodePane
+            lang="javascript"
+            textSize={15}
+            source={require("raw-loader!../assets/component.example")}
+          />
         </Slide>
         <Slide>
           <CodePane
-            lang="jsx"
+            lang="javascript"
+            textSize={20}
             source={require("raw-loader!../assets/minified.example")}
-            margin="20px auto"
           />
         </Slide>
-        <Slide maxHeight={900} maxWidth={1400} bgColor="black">
-          <Image src={images.npmProptypes.replace("/", "")} height="500px"/>
+        <Slide bgColor="black">
+          <Image src={images.npmProptypes.replace("/", "")} height="650px"/>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Appear fid="1">
-              <Text textSize="1em" caps margin="20px 0px 0px" bold>Before:</Text>
+              <Text textSize="2em" caps margin="20px 0px 0px" bold>Before:</Text>
           </Appear>
           <Appear fid="2">
-            <Text textSize="1em" textColor="white" margin="20px 0px 0px" bold>app.fe302cb3ee26d775c717.js  240 kB    0, 2  [emitted]</Text>
+            <Text textSize="2em" textColor="white" margin="20px 0px 0px" bold>app.fe302cb3ee26d775c717.js  240 kB</Text>
           </Appear>
           <Appear fid="3">
-              <Text textSize="1em" caps margin="20px 0px 0px" bold>After:</Text>
+              <Text textSize="2em" caps margin="20px 0px 0px" bold>After:</Text>
           </Appear>
           <Appear fid="4">
-            <Text textSize="1em" textColor="white" margin="20px 0px 0px" bold>app.595bddb462990656d636.js  230 kB    0, 2  [emitted]</Text>
+            <Text textSize="2em" textColor="white" margin="20px 0px 0px" bold>app.595bddb462990656d636.js  230 kB</Text>
           </Appear>
           <Appear fid="4">
-            <Heading size={2} caps fit textColor="black">
-              5% less code
+            <Heading size={2} caps fit margin="20px 0px 0px" textColor="black">
+              🔥 5% less code 🔥
             </Heading>
           </Appear>
         </Slide>
         <Slide>
           <CodePane
-            lang="jsx"
+            lang="javascript"
             source={require("raw-loader!../assets/noProptypes.example")}
-            margin="20px auto"
+            textSize={20}
           />
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             babel-react-optimize
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000} bgColor="black">
+        <Slide bgColor="black">
           <Image src={images.babelReactOptimize.replace("/", "")} height="600px"/>
+          <Cite>Source: James Kyle - https://github.com/thejameskyle/babel-react-optimize</Cite>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.runtime.replace("/", "")} bgDarken={0.5}>
+        <Slide bgImage={images.runtime.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Runtime
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
-            React perf tools - let’s get wasted
+            React perf tools & let’s get wasted
           </Heading>
-        </Slide>
-        <Slide maxWidth={1400}>
-          <Heading size={2} caps fit>
+          <Heading size={1} fit>
             npm i --save-dev react-addons-perf
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
-          <Image src={images.reactPerfTools.replace("/", "")} height="900px"/>
+        <Slide>
+          <Image src={images.reactPerfTools.replace("/", "")} height="475px"/>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
+            Why did you update?
+          </Heading>
+          <Heading size={1} fit>
             npm i --save-dev why-did-you-update
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
-          <Image src={images.whyUpdate.replace("/", "")} height="900px"/>
+        <Slide margin={0}>
+          <Image src={images.whyUpdate.replace("/", "")} height="600px"/>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Render as little as possible
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.panda.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400}>
-          <Heading size={2} caps fit>
-            Use shouldComponentUpdate
+        <Slide bgImage={images.panda.replace("/", "")} bgDarken={0}></Slide>
+        <Slide>
+          <Heading size={2} fit>
+            USE shouldComponentUpdate()
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
-            Use pure components
+            Use Immutable data
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             Inline React Elements in production
           </Heading>
         </Slide>
-        <Slide maxHeight={900} maxWidth={2000}>
-          <Image src={images.reactInline.replace("/", "")} height="900px"/>
+        <Slide>
+          <Image src={images.reactInline.replace("/", "")} height="600px"/>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit>
             React component profiling (Chrome/IE)
           </Heading>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.profiling.replace("/", "")} bgDarken={0}></Slide>
-        <Slide maxWidth={1400} bgImage={images.splitting.replace("/", "")} bgDarken={0}>
+        <Slide bgImage={images.profiling.replace("/", "")} bgDarken={0}></Slide>
+        <Slide bgImage={images.splitting.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Code Spliting
           </Heading>
         </Slide>
-        <Slide maxWidth={1400}>
+        <Slide>
           <Heading size={2} caps fit textFont="primary">
             How do we 🐑 code to production?
           </Heading>
@@ -461,7 +465,7 @@ export default class Presentation extends React.Component {
             <Appear><Cite>Source: real life</Cite></Appear>
           </List>
         </Slide>
-        <Slide maxWidth={1400} bgImage={images.inception.replace("/", "")} bgDarken={0}>
+        <Slide bgImage={images.inception.replace("/", "")} bgDarken={0}>
           <Heading size={2} fit textColor="white">
             We need to go deeper
           </Heading>
@@ -486,11 +490,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Demo
-          </Heading>
-        </Slide>
-        <Slide bgColor="black">
-          <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Questions?
           </Heading>
         </Slide>
         <Slide bgColor="black">

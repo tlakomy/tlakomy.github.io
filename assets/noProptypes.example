@@ -1,2 +1,6 @@
-l=s.default.createClass({displayName:"InfoButton",getClasses:function(){return(0,o.default)("button",this.props.className)},render:function(){return s.default.createElement("button",{className:this.getClasses(),onClick:this.props.clickHandler},s.default.createElement("span",{className:"desktop"},this.props.desktopText),s.default.createElement("span",{className:"mobile"},this.props.mobileText))}});t.default=l},297
-
+l=s.default.createClass({displayName:"InfoButton",getClasses:function()
+{return(0,o.default)("button",this.props.className)},render:function()
+{return s.default.createElement("button",{className:this.getClasses(),
+onClick:this.props.clickHandler},s.default.createElement("span",
+{className:"desktop"},this.props.desktopText),s.default.createElement("span"
+,{className:"mobile"},this.props.mobileText))}});t.default=l},297
