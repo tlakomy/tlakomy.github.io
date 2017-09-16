@@ -69,21 +69,18 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck contentWidth={1200} transition={["fade"]} theme={theme} transitionDuration={500}>
-        <Slide bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="black">
+        <Slide bgColor="black">
+          <Heading size={1} fit caps lineHeight={1} textColor="primary">
             Load it faster
           </Heading>
           <Heading size={1} fit caps>
              improving React apps loading time and performance
           </Heading>
-          <Text textSize="1em" caps margin="20px 0px 0px" bold>Tomasz Łakomy, Software Engineer @ Egnyte</Text>
-        </Slide>
-        <Slide bgColor="black">
-          <Image fit src={images.egnyteLogo.replace("/", "")} height="300px"/>
+          <Image fit src={images.egnyteLogo.replace("/", "")} height="200px"/>
         </Slide>
         <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Motivation
+              Motivation
           </Heading>
         </Slide>
         <Slide bgColor="black">
@@ -133,11 +130,6 @@ export default class Presentation extends React.Component {
             Let's talk about mobile
           </Heading>
         </Slide>
-        <Slide bgColor="black">
-          <Heading size={2} caps fit textColor="primary" textFont="primary">
-            Mobile <S type="strikethrough">first</S> only
-          </Heading>
-        </Slide>
         <Slide>
           <Heading size={2} caps fit>
             JavaScript on mobile is costly
@@ -150,14 +142,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="black">
           <Image fit src={images.jsStartup.replace("/", "")} height="600px"/>
           <Cite>Source: Addy Osmani - JavaScript Start-up Performance @ medium.com</Cite>
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
-            How do we simulate mobile CPU on desktop?
-          </Heading>
-        </Slide>
-        <Slide bgColor="black">
-          <Image fit src={images.throttlingOn.replace("/", "")} height="500px"/>
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
@@ -202,19 +186,10 @@ export default class Presentation extends React.Component {
             So let's optimize for everyone!
           </Heading>
         </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
-            The best code is no code
-          </Heading>
-        </Slide>
         <Slide bgImage={images.bookshelf.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
             Users, not code
           </Heading>
-        </Slide>
-        <Slide>
-          <Image fit src={images.averageWebsite.replace("/", "")} height="600px"/>
-          <Cite>Source: https://twitter.com/HenriHelvetica/status/888129619550810112</Cite>
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
@@ -223,14 +198,19 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
-            Meet Shrek
+            🐑 less assets (fonts, images, code)
           </Heading>
         </Slide>
         <Slide bgImage={images.shrek.replace("/", "")} bgDarken={0}>
-          <Appear>
-            <Heading size={2} caps fit textColor="black" bgColor="white">
+          <Appear fid="1">
+            <Text textSize={100} caps bold textColor="black" bgColor="white">
+              Meet Shrek
+            </Text>
+          </Appear>
+          <Appear fid="2">
+            <Text textSize={60} caps bold textColor="black" bgColor="white">
               (a.k.a. average JS bundle in 2017)
-            </Heading>
+            </Text>
           </Appear>
         </Slide>
         <Slide bgImage={images.shrekAfter.replace("/", "")} bgDarken={0}></Slide>
@@ -242,12 +222,6 @@ export default class Presentation extends React.Component {
         <Slide bgColor="black">
           <Image fit src={images.coverage.replace("/", "")} height="500px"/>
         </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
-            Lighthouse audits (Chrome 60+)
-          </Heading>
-        </Slide>
-        <Slide bgImage={images.lighthouse.replace("/", "")}></Slide>
         <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Minimize with Babili
@@ -284,18 +258,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
-            Ship less libraries
-          </Heading>
-        </Slide>
-        <Slide bgColor="primary">
-          <CodePane
-            lang="javascript"
-            textSize={20}
-            source={require("raw-loader!../assets/lodash.example")}
-          />
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
             Webpack tree shaking
           </Heading>
         </Slide>
@@ -311,9 +273,6 @@ export default class Presentation extends React.Component {
           <Heading size={2} caps fit>
             Ship React for production
           </Heading>
-        </Slide>
-        <Slide bgColor="black">
-          <Image src={images.osmaniTweet.replace("/", "")} height="100%"/>
         </Slide>
         <Slide bgImage={images.devReactProd.replace("/", "")}></Slide>
         <Slide bgColor="black">
@@ -398,28 +357,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
-            React perf tools & let’s get wasted
-          </Heading>
-          <Heading size={1} fit>
-            npm i --save-dev react-addons-perf
-          </Heading>
-        </Slide>
-        <Slide>
-          <Image src={images.reactPerfTools.replace("/", "")} height="475px"/>
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
-            Why did you update?
-          </Heading>
-          <Heading size={1} fit>
-            npm i --save-dev why-did-you-update
-          </Heading>
-        </Slide>
-        <Slide margin={0}>
-          <Image src={images.whyUpdate.replace("/", "")} height="600px"/>
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
             Render as little as possible
           </Heading>
         </Slide>
@@ -430,8 +367,8 @@ export default class Presentation extends React.Component {
           </Heading>
         </Slide>
         <Slide>
-          <Heading size={2} caps fit>
-            Use Immutable data
+          <Heading size={2} fit>
+            USE pureComponents WITH IMMUTABLE DATA
           </Heading>
         </Slide>
         <Slide>
@@ -450,24 +387,10 @@ export default class Presentation extends React.Component {
         <Slide bgImage={images.profiling.replace("/", "")} bgDarken={0}></Slide>
         <Slide bgImage={images.splitting.replace("/", "")} bgDarken={0.5}>
           <Heading size={2} caps fit textColor="white">
-            Code Spliting
+            React Code Spliting
           </Heading>
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit textFont="primary">
-            How do we 🐑 code to production?
-          </Heading>
-          <List>
-            <Appear><ListItem>Yolo development build to prod</ListItem></Appear>
-            <Appear><ListItem>Single minified app.js</ListItem></Appear>
-            <Appear><ListItem>Separate app.js and vendor.js</ListItem></Appear>
-            <Appear><ListItem>Different bundles for different routes</ListItem></Appear>
-            <Appear><Cite>Source: real life</Cite></Appear>
-          </List>
-        </Slide>
-        <Slide bgImage={images.inception.replace("/", "")} bgDarken={0}>
-          <Heading size={2} fit textColor="white">
-            We need to go deeper
+          <Heading size={2} caps fit textColor="white">
+            a.k.a. stop making users wait for unnecessary crap at initial page load
           </Heading>
         </Slide>
         <Slide bgColor="black" textColor="primary">
@@ -490,6 +413,21 @@ export default class Presentation extends React.Component {
         <Slide bgColor="black">
           <Heading size={2} caps fit textColor="primary" textFont="primary">
             Demo
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            Bottom line
+          </Heading>
+        </Slide>
+        <Slide>
+          <Heading size={2} caps fit textFont="primary">
+            Ship 🐑 less
+          </Heading>
+        </Slide>
+        <Slide bgColor="black">
+          <Heading size={2} caps fit textColor="primary" textFont="primary">
+            Deliver more
           </Heading>
         </Slide>
         <Slide bgColor="black">
