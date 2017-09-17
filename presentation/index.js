@@ -395,14 +395,6 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
-            Inline React Elements in production
-          </Heading>
-        </Slide>
-        <Slide>
-          <Image src={images.reactInline.replace("/", "")} height="600px"/>
-        </Slide>
-        <Slide>
-          <Heading size={2} caps fit>
             React component profiling (Chrome/IE)
           </Heading>
         </Slide>
