@@ -357,6 +357,28 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide>
           <Heading size={2} caps fit>
+            React perf tools & let’s get wasted
+          </Heading>
+          <Heading size={1} fit>
+            npm i --save-dev react-addons-perf
+          </Heading>
+        </Slide>
+        <Slide>
+          <Image src={images.reactPerfTools.replace("/", "")} height="475px"/>
+        </Slide>
+        <Slide>
+          <Heading size={2} caps fit>
+            Why did you update?
+          </Heading>
+          <Heading size={1} fit>
+            npm i --save-dev why-did-you-update
+          </Heading>
+        </Slide>
+        <Slide margin={0}>
+          <Image src={images.whyUpdate.replace("/", "")} height="600px"/>
+        </Slide>
+        <Slide>
+          <Heading size={2} caps fit>
             Render as little as possible
           </Heading>
         </Slide>
